@@ -24,6 +24,9 @@ nav {
   justify-content: flex-end;
 }
 
+.nav-mobile {
+  display: none;
+}
 nav .logo {
     height: 100px;
     position: fixed;
@@ -85,7 +88,7 @@ nav .first-social {
 
 
 /* Image Banner */
-.banner-container {
+.banner-container-desktop {
   top: 130px;
   height: 600px;
   width: 100%;
@@ -94,6 +97,9 @@ nav .first-social {
   z-index: -1;
 }
 
+.banner-container-mobile {
+  display: none;
+}
 /* .img-container {
 } */
 
@@ -196,6 +202,10 @@ footer {
   width: 80%;
   background-color:  #ED1B24;
 }
+
+.footer-mobile {
+  display: none;
+}
 .footer-container {
   margin-top: 25px;
   display: flex;
@@ -218,4 +228,125 @@ footer li img {
 footer p {
   text-align: center;
   padding-bottom: 20px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) {
+
+html {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+  nav {
+    display: none;
+  }
+
+.nav-mobile {
+  display: block;
+  text-align: center;
+  background-color: #787B7F;
+  border-bottom: 5px solid black;
+}
+
+.mobile-bottom {
+    background-color: #FFF;
+}
+.mobile-links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.mobile-links li {
+  display: flex;
+  margin: 0 5px;
+}
+
+.mobile-links li + li::before {
+  content: "|";
+  margin-right: 5px;
+}
+  body {
+  }
+
+.spacer {
+  display: none;
+}
+  .banner-container-desktop {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+  .banner-container-mobile {
+    display: flex;
+    height: 300px;
+    width: 100%;
+  }
+
+  .banner-container-mobile img{
+    height: 300px;
+    width: 100%;
+  }
+
+  .social {
+    margin-top: 10px;
+  }
+  .banner {
+    font-size: 3rem;
+  }
+
+  .card {
+    width: 400px;
+    height: 400px;
+  }
+
+ .card .text {
+
+   font-size: 2.8rem;
+   width: 100%;
+
+ }
+.card img {
+  width: 400px;
+  height: 400px;
+}
+  .card .overlay{
+          opacity: 1;
+          width: 100%;
+      }
+
+
+  footer {
+    display: none;
+  }
+
+  .empty {
+    height: 20px;
+  }
+  .footer-mobile {
+    background-color: #ED1B24;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    flex-grow: 1;
+  }
+
+  .footer-mobile li {
+    list-style: none;
+  }
+
+  .footer-mobile li img {
+    margin: 2px;
+  }
 }
