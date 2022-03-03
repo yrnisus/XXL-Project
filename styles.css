@@ -254,6 +254,8 @@ html {
     background-color: #FFF;
 }
 .mobile-links {
+  border-top: 5px solid black;
+  padding-top: 5px;
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -302,8 +304,9 @@ html {
   }
 
   .card {
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 300px;
+    margin: 5px;
   }
 
  .card .text {
@@ -313,8 +316,8 @@ html {
 
  }
 .card img {
-  width: 400px;
-  height: 400px;
+  width: 360px;
+  height: 100%;
 }
   .card .overlay{
           opacity: 1;
